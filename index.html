@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izzy's Adventure - Help Izzy reach her bed!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin: 5px 0;
+        }
+
+        .controls {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .control-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        #game-container {
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 1280px) {
+            body {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 32px;
+            }
+            #game-container {
+                transform: scale(0.9);
+                transform-origin: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌙 Izzy's Bedtime 🛏️</h1>
+        <p>Help Izzy navigate through her dark bedroom to reach her cozy bed!</p>
+        <div class="controls">
+            <span class="control-item">⬅️➡️ Arrow Keys: Move</span>
+            <span class="control-item">⬆️ Space/Up: Jump</span>
+            <span class="control-item">🦴 Collect Treats</span>
+            <span class="control-item">🛏️ Reach the Bed</span>
+        </div>
+    </div>
+
+    <div id="game-container"></div>
+
+    <div class="footer">
+        <p>A cozy nighttime platformer featuring Izzy the sleepy hound dog 💤</p>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
